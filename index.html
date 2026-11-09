@@ -200,7 +200,7 @@
     // PWA Service Worker Registration
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW Fail:', err));
+        navigator.serviceWorker.register('./sw_bpsc.js').catch(err => console.log('SW Fail:', err));
       });
     }
 
@@ -460,7 +460,8 @@
         try {
           const parsed = JSON.parse(document.getElementById("importArea").value.trim());
           if(!Array.isArray(parsed)) throw new Error("डेटा JSON Array फॉर्मेट में होना चाहिए।");
-          let count = 0;
+        
+          let count = 0
           parsed.forEach(item => {
             if(item.question && item.answer) {
               const existing = allCards.find(c => c.id === item.id);
