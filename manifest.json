@@ -1,7 +1,9 @@
 {
   "name": "BPSC Master Recall",
   "short_name": "BPSC Recall",
+  "id": "/bpsc-flashcard/",
   "start_url": "./index.html",
+  "scope": "/bpsc-flashcard/",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
